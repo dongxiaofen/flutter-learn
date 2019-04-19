@@ -4,6 +4,7 @@ import 'pages/NewsListPage.dart';
 import 'pages/TweersListPage.dart';
 import 'pages/MyInfoPage.dart';
 import 'pages/DiscoveryPage.dart';
+import 'pages/MyDrawer.dart';
 
 void main() {
   runApp(new MyOSCClient());
@@ -75,6 +76,26 @@ class MyOSCClientState extends State<MyOSCClient> {
   Text getTabTitle(int curIdx) {
     return new Text(appBarTitles[curIdx], style: getTabTextStyle(curIdx),);
   }
+  List<BottomNavigationBarItem> getNavBarItems() {
+    return [
+      new BottomNavigationBarItem(
+        icon: getTabIcon(0),
+        title: getTabTitle(0),
+      ),
+      new BottomNavigationBarItem(
+        icon: getTabIcon(1),
+        title: getTabTitle(1),
+      ),
+      new BottomNavigationBarItem(
+        icon: getTabIcon(2),
+        title: getTabTitle(2),
+      ),
+      new BottomNavigationBarItem(
+        icon: getTabIcon(3),
+        title: getTabTitle(3),
+      ),
+    ];
+  }
   @override
   Widget build(BuildContext context) {
     _body = new IndexedStack(
@@ -92,24 +113,7 @@ class MyOSCClientState extends State<MyOSCClient> {
         ),
         body: _body,
         bottomNavigationBar: new CupertinoTabBar(
-          items: <BottomNavigationBarItem>[
-            new BottomNavigationBarItem(
-              icon: getTabIcon(0),
-              title: getTabTitle(0),
-            ),
-            new BottomNavigationBarItem(
-              icon: getTabIcon(1),
-              title: getTabTitle(1),
-            ),
-            new BottomNavigationBarItem(
-              icon: getTabIcon(2),
-              title: getTabTitle(2),
-            ),
-            new BottomNavigationBarItem(
-              icon: getTabIcon(3),
-              title: getTabTitle(3),
-            ),
-          ],
+          items: getNavBarItems(),
           currentIndex: _tabIndex,
           onTap: (index) {
             setState(() {
@@ -117,6 +121,7 @@ class MyOSCClientState extends State<MyOSCClient> {
             });
           },
         ),
+        drawer: new MyDrawer(),
       ),
     );
   }
