@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DiscoveryPage extends StatelessWidget {
-  final text = 'this is DiscoveryPage';
+class Income extends StatelessWidget {
+  final text = 'this is Income';
   @override
   Widget build(BuildContext context) {
     return new Padding(

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TweersListPage extends StatelessWidget {
-  final text = 'this is TweersListPage';
+  final text = '本分';
   @override
   Widget build(BuildContext context) {
     return new Padding(

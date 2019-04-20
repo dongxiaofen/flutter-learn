@@ -19,8 +19,9 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
-  dio: ^2.1.x
-  # http: ^0.12.0
+  fluro: "^1.4.0"
+  dio: ^2.1.0
+  http: ^0.12.0
   # flutter_webview_plugin: ^0.3.0+2
   # image_picker: ^0.4.10
   # shared_preferences: ^0.4.3
@@ -78,6 +79,12 @@ flutter:
     - images/leftmenu/ic_settings.png
     - images/ic_osc_logo.png
     - images/ic_add_pics.png
+    - images/ic_tab_normal_jlb.png
+    - images/ic_tab_selected_jlb.png
+    - images/ic_tab_normal_bf.png
+    - images/ic_tab_selected_bf.png
+    - images/ic_tab_normal_wd.png
+    - images/ic_tab_selected_wd.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
