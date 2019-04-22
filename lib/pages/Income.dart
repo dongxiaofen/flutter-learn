@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Income extends StatelessWidget {
-  final text = 'this is Income';
+  final text = 'this is Income, test';
   @override
   Widget build(BuildContext context) {
     return new Padding(

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../routers/application.dart';
 
 class ClubHomePage extends StatelessWidget {
   final text = '俱乐部页面';
@@ -9,13 +10,14 @@ class ClubHomePage extends StatelessWidget {
       body: new Center(
         child: new Text(text),
       ),
-      // floatingActionButton: new FloatingActionButton(
-      //   backgroundColor: const Color(0xFF3A90FF),
-      //   child: new Text('跳转', style: new TextStyle(color: Colors.white),),
-      //   onPressed: () {
-      //     Navigator.of(context).pushNamed('/income');
-      //   },
-      // ),
+      floatingActionButton: new FloatingActionButton(
+        backgroundColor: const Color(0xFF3A90FF),
+        child: new Text('跳转', style: new TextStyle(color: Colors.white),),
+        onPressed: () {
+          // Navigator.of(context).pushNamed('/income');
+          Application.router.navigateTo(context, '/income');
+        },
+      ),
     );
   }
 }
