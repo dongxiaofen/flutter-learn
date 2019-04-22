@@ -4,6 +4,8 @@ import 'package:fluro/fluro.dart';
 import 'routers/routers.dart';
 import 'routers/application.dart';
 
+import 'api/client.dart';
+
 void main() {
   runApp(new MyApp());
 }
@@ -19,6 +21,7 @@ class MyAppState extends State<MyApp> {
     final router = new Router();
     Routers.configureRoutes(router);
     Application.router = router;
+    getUserInfo();
   }
   @override
   Widget build(BuildContext context) {

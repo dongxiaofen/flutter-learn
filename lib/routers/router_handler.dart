@@ -13,7 +13,6 @@ var rootHandle = new Handler(
 // 收入记录
 var incomeHandle = new Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-    print('this is router params: $params');
     String clubId = params['clubId']?.first;
     String testData = params['testData']?.first;
     return new Income(clubId, testData);
