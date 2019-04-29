@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_tab_normal_jlb@1x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="俱乐部首页" transform="translate(-51.000000, -628.000000)">
+            <g id="ic_tab_normal_jlb" transform="translate(51.000000, 628.000000)">
+                <rect id="矩形" fill="#FFFFFF" x="0" y="0" width="24" height="24"></rect>
+                <g id="分组-10" transform="translate(2.000000, 2.000000)">
+                    <path d="M1.59443614,7.68491972 C1.06070187,8.11190714 0.75,8.75836117 0.75,9.44187454 L0.75,17 C0.75,18.2426407 1.75735931,19.25 3,19.25 L17,19.25 C18.2426407,19.25 19.25,18.2426407 19.25,17 L19.25,9.44187454 C19.25,8.75836117 18.9392981,8.11190714 18.4055639,7.68491972 L11.4055639,2.08491972 C10.5838219,1.42752615 9.41617811,1.42752615 8.59443614,2.08491972 L1.59443614,7.68491972 Z" id="路径" stroke="#9C9EA7" stroke-width="1.5" fill="#FFFFFF"></path>
+                    <rect id="矩形" fill="#9C9EA7" x="13" y="13" width="4" height="1.5" rx="0.75"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

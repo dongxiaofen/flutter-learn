@@ -20,10 +20,10 @@ class MyDrawer extends StatelessWidget {
   );
   List menuTitles = ['发布动弹', '动弹小黑屋', '关于', '设置'];
   List menuIcon = [
-    './images/leftmenu/ic_fabu.png',
-    './images/leftmenu/ic_xiaoheiwu.png',
-    './images/leftmenu/ic_about.png',
-    './images/leftmenu/ic_settings.png'
+    './images/ic_tab_selected_jlb.png',
+    './images/ic_tab_selected_jlb.png',
+    './images/ic_tab_selected_jlb.png',
+    './images/ic_tab_selected_jlb.png'
   ];
   @override
   Widget build(BuildContext context) {
@@ -84,12 +84,7 @@ class MyDrawer extends StatelessWidget {
     return new InkWell(
       child: listItemContent,
       onTap: () {
-        // switch (index) {
-        //   case 0:
-        //     // 发布动弹
-        //     break;
-        //   default:
-        // }
+        print(index);
       },
     );
   }

@@ -1,8 +1,8 @@
-// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
 import 'routers/routers.dart';
 import 'routers/application.dart';
+import 'dart:async';
 
 import 'api/client.dart';
 
@@ -16,23 +16,31 @@ class MyApp extends StatefulWidget {
     return new MyAppState();
   }
 }
+
 class MyAppState extends State<MyApp> {
   MyAppState() {
     final router = new Router();
     Routers.configureRoutes(router);
     Application.router = router;
-    getUserInfo();
+    userInfoApi();
+  }
+  var userInfo;
+  Future userInfoApi() async {
+    var data = await getUserInfo();
+    setState(() {
+      userInfo = data;
+    });
   }
   @override
   Widget build(BuildContext context) {
     final app = new MaterialApp(
+      initialRoute: '/',
       title: '脑学家',
       theme: new ThemeData(
-        primaryColor: const Color(0xff3A90FF)
+        primaryColor: const Color(0xffFFDC2E)
       ),
       onGenerateRoute: Application.router.generator,
     );
-    print('initial Application.router = ${Application.router.generator}');
     return app;
   }
 }

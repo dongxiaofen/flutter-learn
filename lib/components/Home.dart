@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import './ClubHomePage.dart';
 import './TweersListPage.dart';
 import './MyInfoPage.dart';
@@ -11,20 +12,27 @@ class Home extends StatefulWidget {
 }
 
 class HomeState extends State<Home> {
-  final appBarTitles = ['俱乐部', '本分', '我的'];
-  final tabTextStyleSelected = new TextStyle(color: const Color(0xff3A90FF), fontSize: 9.0);
+  final appBarData = [
+    {
+      'title': '首页',
+      'image': 'images/ic_tab_normal_jlb.svg'
+    },
+    {
+      'title': '问答',
+      'image': 'images/ic_tab_normal_bf.svg'
+    },
+    {
+      'title': '我的',
+      'image': 'images/ic_tab_normal_wd.svg'
+    }
+  ];
+  final tabTextStyleSelected = new TextStyle(color: const Color(0xffFFDC2E), fontSize: 9.0);
   final tabBarStyleNormal = new TextStyle(color:  const Color(0xff9C9EA7), fontSize: 9.0);
-  Color themColor = const Color(0xFF3A90FF);
+  Color themColor = const Color(0xFFFFDC2E);
   int _tabIndex = 0;
 
-  var tabImages;
   var _body;
   var pages;
-  // var bottomNavBarItems;
-
-  Image getTabImage(path) {
-    return new Image.asset(path, width: 24.0, height: 24.0,);
-  }
 
   @override
   void initState() {
@@ -34,28 +42,20 @@ class HomeState extends State<Home> {
       new TweersListPage(),
       new MyInfoPage()
     ];
-    if (tabImages == null) {
-      tabImages = [
-        [
-          getTabImage('images/ic_tab_normal_jlb.png'),
-          getTabImage('images/ic_tab_selected_jlb.png')
-        ],
-        [
-          getTabImage('images/ic_tab_normal_bf.png'),
-          getTabImage('images/ic_tab_selected_bf.png')
-        ],
-        [
-          getTabImage('images/ic_tab_normal_wd.png'),
-          getTabImage('images/ic_tab_selected_wd.png')
-        ]
-      ];
-    }
   }
-  Image getTabIcon(int curIdx) {
+  Widget getTabIcon(int curIdx) {
+    var tabIcon;
     if (curIdx == _tabIndex) {
-      return tabImages[curIdx][1];
+      tabIcon = new SvgPicture.asset(
+        appBarData[curIdx]['image'],
+        color: Color(0xffFFDC2E),
+      );
+    } else {
+      tabIcon = new SvgPicture.asset(
+        appBarData[curIdx]['image']
+      );
     }
-    return tabImages[curIdx][0];
+    return tabIcon;
   }
   TextStyle getTabTextStyle(int curIdx) {
     if (curIdx == _tabIndex) {
@@ -64,7 +64,7 @@ class HomeState extends State<Home> {
     return tabBarStyleNormal;
   }
   Text getTabTitle(int curIdx) {
-    return new Text(appBarTitles[curIdx], style: getTabTextStyle(curIdx),);
+    return new Text(appBarData[curIdx]['title'], style: getTabTextStyle(curIdx),);
   }
   List<BottomNavigationBarItem> getNavBarItems() {
     return [
@@ -76,10 +76,6 @@ class HomeState extends State<Home> {
         icon: getTabIcon(1),
         title: getTabTitle(1),
       ),
-      // new BottomNavigationBarItem(
-      //   icon: getTabIcon(2),
-      //   title: getTabTitle(2),
-      // ),
       new BottomNavigationBarItem(
         icon: getTabIcon(2),
         title: getTabTitle(2),
@@ -92,13 +88,9 @@ class HomeState extends State<Home> {
       children: pages,
       index: _tabIndex,
     );
-    return new MaterialApp(
-      theme: new ThemeData(
-        primaryColor: themColor
-      ),
-      home: new Scaffold(
+    return new Scaffold(
         appBar: new AppBar(
-          title: Text(appBarTitles[_tabIndex], style: new TextStyle(color: Colors.white)),
+          title: Text(appBarData[_tabIndex]['title'], style: new TextStyle(color: Colors.white)),
           iconTheme: new IconThemeData(color: Colors.white),
         ),
         body: _body,
@@ -112,7 +104,6 @@ class HomeState extends State<Home> {
           },
         ),
         drawer: new MyDrawer(),
-      ),
-    );
+      );
   }
 }
