@@ -52,6 +52,7 @@ flutter:
     - lib/routers/
     - lib/store/
     - lib/utils/
+    - lib/helpers/
     - images/
     - images/ic_tab_normal_jlb.svg
     - images/ic_tab_normal_bf.svg
