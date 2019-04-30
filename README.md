@@ -1,16 +1,7 @@
 # flutterapp
 
-A new Flutter project.
+# Mobx注意事项
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+- 每个store.dart都会有一个store.g.dart文件
+- flutter packages pub run build_runner build 命令会生成store.g.dart的代码
+- flutter packages pub run build_runner watch 命令可检测文件变化,自动修改store.g.dart生成的代码

@@ -7,7 +7,6 @@ class MyInfoPage extends StatelessWidget {
     clientStore.getUserInfoAction();
   }
   final ClientStore clientStore = new ClientStore();
-  final text = '我的';
   @override
   Widget build(BuildContext context) {
     return new Center(
