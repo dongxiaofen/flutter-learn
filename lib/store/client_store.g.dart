@@ -19,8 +19,7 @@ mixin _$ClientStore on _ClientStore, Store {
 
   @override
   set userInfo(Map<String, dynamic> value) {
-    // 我那边有报错这个地方我注释了
-    // _$userInfoAtom.context.checkIfStateModificationsAreAllowed(_$userInfoAtom);
+    _$userInfoAtom.context.checkIfStateModificationsAreAllowed(_$userInfoAtom);
     super.userInfo = value;
     _$userInfoAtom.reportChanged();
   }
