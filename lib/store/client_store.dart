@@ -1,7 +1,6 @@
 
 import 'package:mobx/mobx.dart';
 import 'dart:async';
-import 'dart:convert';
 import 'package:flutter_nxj_c/api/client.dart';
 
 part 'client_store.g.dart';
