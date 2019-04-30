@@ -10,7 +10,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: ">=2.1.0-dev <3.0.0"
 
 dependencies:
   flutter:
@@ -30,8 +30,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  build_runner: ^1.2.5
-  mobx_codegen:
+  build_runner:
+  mobx_codegen: 
 
 
 # For information on the generic Dart part of this file, see the
@@ -52,6 +52,7 @@ flutter:
     - lib/routers/
     - lib/store/
     - lib/utils/
+    - lib/helpers/
     - images/
     - images/ic_tab_normal_jlb.svg
     - images/ic_tab_normal_bf.svg
