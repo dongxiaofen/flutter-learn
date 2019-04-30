@@ -12,13 +12,13 @@ mixin _$ClientStore on _ClientStore, Store {
   final _$userInfoAtom = Atom(name: '_ClientStore.userInfo');
 
   @override
-  Object get userInfo {
+  Map<String, dynamic> get userInfo {
     _$userInfoAtom.reportObserved();
     return super.userInfo;
   }
 
   @override
-  set userInfo(Object value) {
+  set userInfo(Map<String, dynamic> value) {
     _$userInfoAtom.context.checkIfStateModificationsAreAllowed(_$userInfoAtom);
     super.userInfo = value;
     _$userInfoAtom.reportChanged();
