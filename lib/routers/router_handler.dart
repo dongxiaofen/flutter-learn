@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
 
-import '../components/Home.dart';
-import '../components/Income.dart';
+import '../containers/Home.dart';
+import '../containers/Income.dart';
 
 // 首页
 var rootHandle = new Handler(
