@@ -1,6 +1,6 @@
-# flutterapp
+# flutter app
 
-# Mobx注意事项
+### Mobx注意事项
 
 - 每个store.dart都会有一个store.g.dart文件
 - flutter packages pub run build_runner build 命令会生成store.g.dart的代码
