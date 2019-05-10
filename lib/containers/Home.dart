@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import './ClubHomePage.dart';
+import './HomePage.dart';
 import './TweersListPage.dart';
 import './MyInfoPage.dart';
 import './MyDrawer.dart';
@@ -38,7 +38,7 @@ class HomeState extends State<Home> {
   void initState() {
     super.initState();
     pages = <Widget>[
-      new ClubHomePage(),
+      new HomePage(),
       new TweersListPage(),
       new MyInfoPage()
     ];

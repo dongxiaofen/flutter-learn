@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:dio/dio.dart';
 
-var baseUrl = 'http://192.168.0.99:18081';
+var baseUrl = 'http://192.168.0.99:18080';
 BaseOptions options =
     new BaseOptions(baseUrl: baseUrl, headers: {'nxj-id': 'flutter'}
         // cookies:
@@ -29,16 +29,13 @@ class NetUtils {
       return e; //continue
     }));
   }
-  Future get(String url, {Map<String, dynamic> params}) async {
-    var response = await dio.get(url, queryParameters: params);
-    // print('headers: ${response.headers}');
-    // print('request: ${response.request}');
-    // print('statusCode: ${response.statusCode}');
-    // print('data: ${response.data}');
-    return response.data;
+
+  static Future get(String url, { Map<String,dynamic> params }) async{
+     var response = await dio.get(url, queryParameters: params);
+    return  response.data;
   }
 
-  Future post(String url, Map<String, dynamic> params) async {
+  static Future post(String url, Map<String,dynamic> params) async{
     var response = await dio.post(url, data: params);
     return response.data;
   }

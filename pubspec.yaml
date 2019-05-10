@@ -49,6 +49,7 @@ flutter:
   assets:
     - lib/api/
     - lib/containers/
+    - lib/widgets/
     - lib/routers/
     - lib/store/
     - lib/utils/
