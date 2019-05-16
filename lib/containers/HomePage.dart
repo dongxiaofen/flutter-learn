@@ -7,6 +7,8 @@ import 'dart:async';
 // import '../routers/application.dart';
 import 'package:flutter_nxj_c/api/client.dart';
 import 'package:flutter_nxj_c/widgets/homePage/Banner.dart';
+import 'package:flutter_nxj_c/widgets/homePage/HomeNav.dart';
+import 'package:flutter_nxj_c/widgets/homePage/CardItem.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -28,9 +30,9 @@ class HomePageState extends State<HomePage> {
     super.initState();
     getMoreData(0);
     _scrollController.addListener(() {
-      // print('thsi is position: ${_scrollController.position}');
       if (_scrollController.position.pixels == _scrollController.position.maxScrollExtent) {
         getMoreData(1);
+        print('END');
       }
     });
   }
@@ -46,9 +48,9 @@ class HomePageState extends State<HomePage> {
         'page': pageSize,
         'index': pageIndex
       });
-      hasMore = (pageIndex * pageSize < response['totalElements']);
       if (this.mounted) {
         setState(() {
+          hasMore = (pageIndex * pageSize < response['totalElements']);
           isLoading = false;
           items.addAll(response['content']);
         });
@@ -79,16 +81,20 @@ class HomePageState extends State<HomePage> {
         itemBuilder: (context, index) {
           if (index == 0) {
             // banner
-            return HomeBanner();
+            return Column(
+              children: <Widget>[
+                HomeBanner(),
+                HomeNav()
+              ],
+            );
           }
           if (index == items.length) {
             // last
-            return Text('this is end');
+            return _renderEndFooter();
           }
           // render item
           return Container(
-            height: 600.0,
-            child: Text(items[index]['title']),
+            child: CardItem(),
           );
         },
         controller: _scrollController,
@@ -112,4 +118,32 @@ class HomePageState extends State<HomePage> {
     //   ),
     // );
   }
+  Widget _renderEndFooter() {
+    if (hasMore) {
+      return Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Opacity(
+                opacity: isLoading ? 1.0 : 0.0,
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation(const Color(0xffFFDC2E)),
+                ),
+              ),
+              SizedBox(height: 20.0,),
+              Text('数据加载中，请稍后', style: TextStyle(fontSize: 15.0),)
+            ],
+          ),
+        ),
+      );
+    } else {
+      return Container(
+        padding: EdgeInsets.all(20.0),
+        alignment: Alignment.center,
+        child: Text('没有更多了'),
+      );
+    }
+  }
+
 }

@@ -2,23 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
-  // final text = 'this is MyDrawer';
-  // @override
-  // Widget build(BuildContext context) {
-  //   return new Padding(
-  //     padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
-  //     child: new Text(text),
-  //   );
-  // }
   static const double DRAWER_WIDTH = 300.0;
   static const double IMAGE_ICON_WIDTH = 30.0;
   static const double ARROW_ICON_WIDHT = 16.0;
-  var rightArrowIcon = new Image.asset(
+  final rightArrowIcon = new Image.asset(
     'images/ic_arrow_right.png',
     width: ARROW_ICON_WIDHT,
     height: ARROW_ICON_WIDHT,
   );
-  List menuTitles = ['发布动弹', '动弹小黑屋', '关于', '设置'];
+  List menuTitles = ['收藏', '相册', '关于', '设置'];
   List menuIcon = [
     './images/ic_tab_selected_jlb.png',
     './images/ic_tab_selected_jlb.png',
@@ -27,15 +19,23 @@ class MyDrawer extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return new ConstrainedBox(
-      constraints: const BoxConstraints.expand(width: DRAWER_WIDTH),
-      child: new Material(
-        elevation: 16.0,
-        child: new ListView.builder(
-          itemCount: menuTitles.length * 2 + 1,
-          itemBuilder: renderRow,
-          padding: const EdgeInsets.all(0.0),
-        ),
+    // return new ConstrainedBox(
+    //   constraints: const BoxConstraints.expand(width: DRAWER_WIDTH),
+    //   child: new Material(
+    //     elevation: 16.0,
+    //     child: new ListView.builder(
+    //       itemCount: menuTitles.length * 2 + 1,
+    //       itemBuilder: renderRow,
+    //       padding: const EdgeInsets.all(0.0),
+    //     ),
+    //   ),
+    // );
+    return Material(
+      elevation: 16.0,
+      child: new ListView.builder(
+        itemCount: menuTitles.length * 2 + 1,
+        itemBuilder: renderRow,
+        padding: const EdgeInsets.all(0.0),
       ),
     );
   }
@@ -50,8 +50,8 @@ class MyDrawer extends StatelessWidget {
       // render covet image
       var img = Image.asset(
         './images/cover_img.jpg',
-        width: DRAWER_WIDTH,
-        height: DRAWER_WIDTH,
+        // width: DRAWER_WIDTH,
+        // height: DRAWER_WIDTH,
       );
       return new Container(
         width: DRAWER_WIDTH,
@@ -67,7 +67,7 @@ class MyDrawer extends StatelessWidget {
     }
     index = index ~/ 2;
     var listItemContent = new Padding(
-      padding: const EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 15.0),
+      padding: const EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
       child: new Row(
         children: <Widget>[
           getImageIcon(menuIcon[index]),

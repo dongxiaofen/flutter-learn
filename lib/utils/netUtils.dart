@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:dio/dio.dart';
 
 var baseUrl = 'http://192.168.0.99:18080';
+// var baseUrl = 'http://172.16.154.242:28080';
 BaseOptions options =
     new BaseOptions(baseUrl: baseUrl, headers: {'nxj-id': 'flutter'}
         // cookies:
@@ -32,6 +33,7 @@ class NetUtils {
 
   static Future get(String url, { Map<String,dynamic> params }) async{
      var response = await dio.get(url, queryParameters: params);
+    //  print('response.data ${response.data}');
     return  response.data;
   }
 

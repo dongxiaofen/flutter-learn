@@ -22,12 +22,11 @@ class _BannerPageView extends State<BannerPageView> {
   @override
   void initState() {
     super.initState();
-    controller = PageController(initialPage:  realIndex);
+    controller = PageController(initialPage: realIndex);
     timer = Timer.periodic(Duration(seconds: 5), (timer) {
-      print('this is timer ${realIndex + 1}');
       controller.animateToPage(
         realIndex + 1,
-        duration: Duration(microseconds: 300),
+        duration: Duration(milliseconds: 300),
         curve: Curves.bounceInOut
       );
     });
@@ -59,17 +58,23 @@ class _BannerPageView extends State<BannerPageView> {
   }
 
   _onPageChanged(int index) {
-    print('this is index $index');
+    // print('this is index $index');
     realIndex = index;
     int count = widget.banner.length;
     if (index == 0) {
-      virtualIndex = count - 1;
+      setState(() {
+        virtualIndex = count - 1;     
+      });
       controller.jumpToPage(count);
     } else if (index == count + 1) {
-      virtualIndex = 0;
+      setState(() {
+        virtualIndex = 0;
+      });
       controller.jumpToPage(1);
     } else {
-      virtualIndex = index - 1;
+      setState(() {
+        virtualIndex = index - 1;
+      });
     }
   }
 

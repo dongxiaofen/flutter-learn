@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_time_normal_yq</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="30" cy="30" r="30"></circle>
+        <linearGradient x1="50%" y1="-54.1766827%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#CBAE00" offset="0%"></stop>
+            <stop stop-color="#9B7600" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#B09700" offset="0%"></stop>
+            <stop stop-color="#7F6100" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#CBAE00" offset="0%"></stop>
+            <stop stop-color="#9B7600" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#FFF2B6" offset="0%"></stop>
+            <stop stop-color="#FFE07F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="添加孩子" transform="translate(-278.000000, -286.000000)">
+            <g id="ic_time_normal_yq" transform="translate(278.000000, 286.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FABF06" xlink:href="#path-1"></use>
+                <rect id="矩形" fill="url(#linearGradient-3)" mask="url(#mask-2)" x="16" y="28" width="28" height="19.5"></rect>
+                <g id="分组-2" mask="url(#mask-2)">
+                    <g transform="translate(16.000000, 14.000000)">
+                        <circle id="椭圆形" fill="#FFFFFF" cx="14" cy="14.46875" r="14"></circle>
+                        <g id="分组-3" stroke-width="1" fill="none">
+                            <path d="M13.6576369,0.472854235 C13.7714268,0.470123272 13.885553,0.46875 14,0.46875 C21.6297292,0.46875 27.8339521,6.57206798 27.9967222,14.1627574 C27.1913399,14.3331945 26.3561402,14.4228516 25.5,14.4228516 C18.872583,14.4228516 13.5,9.05026856 13.5,2.42285156 C13.5,1.75887713 13.5539259,1.10749777 13.6576369,0.472854235 Z" id="合并形状" fill="url(#linearGradient-4)"></path>
+                            <path d="M0.00420907713,14.1220461 C0.188243743,6.55025713 6.38391582,0.46875 14,0.46875 C14.1772322,0.46875 14.3536953,0.472043314 14.5293313,0.478572085 C14.6324327,1.11140999 14.6860352,1.76087101 14.6860352,2.42285156 C14.6860352,9.05026856 9.31345215,14.4228516 2.68603516,14.4228516 C1.76411648,14.4228516 0.866479715,14.3188883 0.00420907713,14.1220461 Z" id="合并形状" fill="url(#linearGradient-5)"></path>
+                        </g>
+                    </g>
+                </g>
+                <ellipse id="椭圆形" fill="url(#linearGradient-6)" mask="url(#mask-2)" cx="30" cy="62.5" rx="19" ry="20"></ellipse>
+                <path d="M25.0169424,43.194904 C26.6050275,42.7417851 28.2756896,42.5 30,42.5 C31.7243104,42.5 33.3949725,42.7417851 34.9830576,43.194904 L30.8574929,50.0708451 C30.7730432,50.2115947 30.6552454,50.3293925 30.5144958,50.4138423 C30.0409155,50.6979905 29.4266552,50.5444254 29.1425071,50.0708451 L25.0169424,43.194904 Z" id="合并形状" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

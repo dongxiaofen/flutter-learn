@@ -12,17 +12,18 @@ void main() {
         Color(AppColors.themeColor), // navigation bar color
     statusBarColor: Color(AppColors.themeColor), // status bar color
   ));
-  runApp(new MyApp());
+  runApp(new MyAppState());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  State createState() {
-    return new MyAppState();
-  }
-}
+// class MyApp extends StatefulWidget {
+//   @override
+//   State createState() {
+//     return new MyAppState();
+//   }
+// }
 
-class MyAppState extends State<MyApp> {
+class MyAppState extends StatelessWidget {
+// class MyAppState extends State<MyApp> {
   MyAppState() {
     final router = new Router();
     Routers.configureRoutes(router);

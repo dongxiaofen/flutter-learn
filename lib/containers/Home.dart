@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import './HomePage.dart';
 import './TweersListPage.dart';
 import './MyInfoPage.dart';
-import './MyDrawer.dart';
+// import './MyDrawer.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -103,7 +103,7 @@ class HomeState extends State<Home> {
             });
           },
         ),
-        drawer: new MyDrawer(),
+        // drawer: new MyDrawer(),
       );
   }
 }
