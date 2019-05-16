@@ -24,7 +24,7 @@ dependencies:
   mobx:
   flutter_mobx:
   shared_preferences: ^0.5.1
-  flutter_svg: ^0.12.0
+  flutter_svg: ^0.13.0
 
 dev_dependencies:
   flutter_test:
